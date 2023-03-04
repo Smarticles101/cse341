@@ -1,19 +1,64 @@
 // LOCALHOST
 ###
-GET http://localhost:8080/contacts
+GET http://localhost:3000/contacts
 ###
-GET http://localhost:8080/contacts/63fab6bebdec553e23df506a
-###
-GET http://localhost:8080/contacts/63fab713bdec553e23df506b
-###
-GET http://localhost:8080/contacts/63fab64cbdec553e23df5068
+GET http://localhost:3000/contacts/63fab6bebdec553e23df506a
+
+### Create contact
+POST http://localhost:3000/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Aaron",
+    "lastName":"Quick",
+    "email":"aaronquick@example.com",
+    "favoriteColor":"Orange",
+    "birthday":"07/20/2000"
+}
+
+
+### PUT contact
+PUT http://localhost:3000/contacts/63fab6bebdec553e23df506a HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"New name",
+    "lastName":"New last name",
+    "email":"test@gmail.com",
+    "favoriteColor":"Yellow",
+    "birthday":"10/10/2000"
+}
+### DELETE contact
+DELETE http://localhost:3000/contacts/63fab6bebdec553e23df506a HTTP/1.1
 
 // PRODUCTION Deploy
 ###
 GET https://cse341-pmx4.onrender.com/contacts
 ###
 GET https://cse341-pmx4.onrender.com/contacts/63fab6bebdec553e23df506a
-###
-GET https://cse341-pmx4.onrender.com/contacts/63fab713bdec553e23df506b
-###
-GET https://cse341-pmx4.onrender.com/contacts/63fab64cbdec553e23df5068
+### Create contact
+POST https://cse341-pmx4.onrender.com/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Aaron",
+    "lastName":"Quick",
+    "email":"aaronquick@example.com",
+    "favoriteColor":"Orange",
+    "birthday":"2001-01-01T07:00:00.000Z"
+}
+
+
+### PUT contact
+PUT https://cse341-pmx4.onrender.com/contacts/63fab6bebdec553e23df506a HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"New name",
+    "lastName":"New last name",
+    "email":"test@gmail.com",
+    "favoriteColor":"Yellow",
+    "birthday":"2001-01-01T07:00:00.000Z"
+}
+### DELETE contact
+DELETE https://cse341-pmx4.onrender.com/contacts/63fab6bebdec553e23df506a HTTP/1.1

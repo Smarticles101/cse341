@@ -1,5 +1,7 @@
 const db = require("./db/database");
 const express = require("express");
+const bodyParser = require('body-parser');
+
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -14,6 +16,8 @@ db.init((err, db) => {
 
 // import the routes
 const routes = require("./routes");
+
+app.use(bodyParser.json());
 
 // use the routes
 app.use("/", routes);
