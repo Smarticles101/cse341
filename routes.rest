@@ -8,12 +8,66 @@ GET http://localhost:8080/contacts/63fab713bdec553e23df506b
 ###
 GET http://localhost:8080/contacts/63fab64cbdec553e23df5068
 
+### Create contact
+POST http://localhost:8080/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Aaron",
+    "lastName":"Quick",
+    "email":"aaronquick@example.com",
+    "favoriteColor":"Orange",
+    "birthday":"2001-01-01T07:00:00.000Z"
+}
+
+
+### PUT contact
+PUT http://localhost:8080/contacts/63fab6bebdec553e23df506a HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"New name",
+    "lastName":"New last name",
+    "email":"test@gmail.com",
+    "favoriteColor":"Yellow",
+    "birthday":"2001-01-01T07:00:00.000Z"
+}
+### DELETE contact
+DELETE http://localhost:8080/contacts/63fab6bebdec553e23df506a HTTP/1.1
+
 // PRODUCTION Deploy
 ###
-GET https://cse341-pmx4.onrender.com/contacts
+GET https://cse341-94ut.onrender.com/contacts
 ###
-GET https://cse341-pmx4.onrender.com/contacts/6403bd5fb3cf75d749d90cdc
+GET https://cse341-94ut.onrender.com/contacts/6403bd5fb3cf75d749d90cdc
 ###
-GET https://cse341-pmx4.onrender.com/contacts/63fab713bdec553e23df506b
+GET https://cse341-94ut.onrender.com/contacts/63fab713bdec553e23df506b
 ###
-GET https://cse341-pmx4.onrender.com/contacts/63fab64cbdec553e23df5068
+GET https://cse341-94ut.onrender.com/contacts/63fab64cbdec553e23df5068
+
+### Create contact
+POST https://cse341-94ut.onrender.com/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Aaron",
+    "lastName":"Quick",
+    "email":"aaronquick@example.com",
+    "favoriteColor":"Orange",
+    "birthday":"2001-01-01T07:00:00.000Z"
+}
+
+
+### PUT contact
+PUT https://cse341-94ut.onrender.com/contacts/63fab713bdec553e23df506b HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"New name",
+    "lastName":"New last name",
+    "email":"test@gmail.com",
+    "favoriteColor":"Yellow",
+    "birthday":"2001-01-01T07:00:00.000Z"
+}
+### DELETE contact
+DELETE https://cse341-94ut.onrender.com/contacts/63fab713bdec553e23df506b HTTP/1.1
